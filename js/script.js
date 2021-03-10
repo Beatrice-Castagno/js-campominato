@@ -16,7 +16,7 @@ alert ("Benvenuto! Avvia il gioco premendo su OK.")
 // Funzione per generare un numero random tra due intervalli
 
 function numRandom(min, max) {
-  var numRandom = Math.floor(Math.random() * (max - min) + min);
+  var numRandom = Math.floor(Math.random() * (max - min + 1) + min);
   return numRandom;
 }
 
@@ -99,7 +99,7 @@ while (numUtenteInserito.length < 84 && gameOver == false) {
     if (inArray(numeriBombe, numUtente)) {
       gameOver = true;
       alert("Game Over! " + "punteggio totalizzato: " + numUtenteInserito.length);
-      var reloadPage = window.location.reload();
+      window.location.reload();
     }
     else {
       numUtenteInserito.push(numUtente);
